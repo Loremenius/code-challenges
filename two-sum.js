@@ -12,22 +12,19 @@ return [0, 1].
 
 var twoSum = function(nums, target) {
     let savedNums = {};
-    nums.forEach((num, index)=>{
-        savedNums = {
+    let solutions  = null;
+    let index = 0
+    while (solutions === null && index < nums.length){
+        const num = nums[index]
+        if (savedNums[target-num]>=0){
+            solutions = [savedNums[target-num], index]
+        }else{
+            savedNums = {
                     ...savedNums,
                     [num]: index
                     }
-    });
-    console.log(savedNums)
-    let index = 0;
-    let solutions  = null;
-    while (index < nums.length && solutions === null){
-        const number = nums[index];
-        if(savedNums[target-number] !== null){
-            solutions = [index, savedNums[target-number]];
+            index += 1
         }
-        index += 1;
-        
     }
     return solutions
     
