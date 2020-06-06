@@ -1,3 +1,4 @@
+// Takes two linked lists that becomce numbers. the linked lists are in reverse order.
 var addTwoNumbers = function(l1, l2) {
 
     // variable to track if adding two numbers is 10 or higher
