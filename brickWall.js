@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/brick-wall/
 var leastBricks = function(wall) {
     const seen = {};
     
