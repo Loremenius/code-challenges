@@ -19,11 +19,15 @@ There is only one duplicate number in the array, but it could be repeated more t
 */
 
 var findDuplicate = function(nums) {
+    // create a new object to store visited numbers
     const visited = {};
+    // loop through the array of numbers
     for (let i =0; i<nums.length; i++){
+        // if number at index i is a key in the visited object: return the number 
         if (visited[nums[i]] === 1){
             return nums[i]
         }else{
+            // if the number in the array is not in the object, add it to the object.
             visited[nums[i]] = 1
         }
     }
